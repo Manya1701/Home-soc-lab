@@ -29,7 +29,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Option A — Try it instantly, no root/network needed
+## A — no root/network needed
 This runs the exact same detection + logging pipeline as live capture, just
 fed with synthetically crafted packets (normal traffic + a simulated port
 scan + a simulated ICMP flood):
@@ -42,7 +42,7 @@ python3 report.py
 You'll see live `[ALERT]` lines print as the attacks are detected, then
 `report.py` will print a summary and save charts to `reports/`.
 
-## Option B — Real live capture (Linux, needs root)
+## B — Real live capture (Linux, needs root)
 ```bash
 sudo python3 capture.py --iface eth0 --duration 60
 python3 report.py
